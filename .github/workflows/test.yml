@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - 'helm/sloop/**'
   pull_request:
     branches:
       - "*"
+    paths-ignore:
+      - 'helm/sloop/**'
 
 jobs:
   test:
