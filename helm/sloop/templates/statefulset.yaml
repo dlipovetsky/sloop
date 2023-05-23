@@ -29,6 +29,7 @@ spec:
       containers:
       - args:
         - --config=/sloopconfig/sloop.json
+        - -v={{ .Values.logVerbosity }}
         command:
         - /sloop
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}

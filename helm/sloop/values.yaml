@@ -1,3 +1,4 @@
+logVerbosity: 2
 serviceAccountName: sloop
 ## If defined, specifies the tolerations to attach to the pods
 tolerations: []
