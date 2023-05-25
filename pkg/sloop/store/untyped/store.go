@@ -56,8 +56,10 @@ func OpenStore(factory badgerwrap.Factory, config *Config) (badgerwrap.DB, error
 		opts = badger.DefaultOptions(config.RootPath)
 	}
 
+	// Prior to v2.2007.4, badger supported WithEnableEventLogging.
+	// As of v2.2007.4, event logging is enabld when the log level is DEBUG.
 	if config.BadgerEnableEventLogging {
-		opts = opts.WithEventLogging(true)
+		opts = opts.WithLoggingLevel(badger.DEBUG)
 	}
 
 	if config.BadgerMaxTableSize != 0 {
