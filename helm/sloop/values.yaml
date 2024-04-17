@@ -7,7 +7,7 @@ podAnnotations: {}
 name: sloop
 replicas: 1
 image:
-  tag: latest
+  tag: sha-29123c2
   repository: ghcr.io/salesforce/sloop
   pullPolicy: IfNotPresent
   # pullSecrets:
